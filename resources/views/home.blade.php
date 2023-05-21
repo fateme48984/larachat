@@ -1,29 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-   <div class="row">
-       <div class="col-md-3">
-           <div class="users">
-               <h5>Users</h5>
-               <ul class="list-group list-chat-item">
-                   <li class="ckat-user-list">
-                       <a href="#">
-                           Hamid
-                       </a>
-                   </li>
-               </ul>
-           </div>
-       </div>
-       <div class="col-md-9">
-           <h1>
-               Message Section
-           </h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Dashboard') }}</div>
 
-           <p class="lead">
-               Select user from the list to begin conversation.
-           </p>
-       </div>
-   </div>
-</div>
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        {{ __('You are logged in!') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -18,12 +18,18 @@ body {
     padding-top: 5px;
     display: inline-block;
     text-align: center;
+    font-size: 13px;
+    line-height: 28px;
 }
 
 .chat-image, .chat-name {
     display: inline-block;
 }
-
+.chat-name {
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
 .chat-user-list {
     margin-bottom: 2px;
     padding: 5px;
